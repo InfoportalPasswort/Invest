@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>InvestAvisor</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1e395a;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+        header {
+            background-color: #1e395a;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #fff;
+        }
+        h2 {
+            color: #1e395a;
+        }
+        p {
+            color: #1e395a;
+        }
+        p2 {
+            color:#1e395a
+        }
+        nav {
+            display: none;
+            background-color: #363636;
+            padding: 10px;
+            top: 90px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            position: absolute;
+        }
+        nav a {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            margin-bottom: 10px;
+        }
+        .menu-btn {
+            cursor: pointer;
+        }
+        .board {
+            margin: 20px;
+            background-color: #dadada;
+            border-radius: 10px;
+            padding: 70px;
+            width: 100%;
+            line-height: 2;
+        }   
+        footer {
+            background-color: #1e395a;
+            color: #dadada;
+            text-align: center;
+            padding: 20px;
+            width: 100%;
+            position: absolute;
+            margin-bottom: 1;
+        }
+    
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>InvestAvisor</h1>
+        <div class="menu-btn">Menu</div>
+    </header>
+    <nav id="menu">
+        <a href="#" class="menu-link" data-target="About">About Us</a>
+        <a href="#" class="menu-link" data-target="Portfolio">Mein Portfolio</a>
+        <a href="#" class="menu-link" data-target="Login">Anmelden</a>
+        <a href="#" class="menu-link" data-target="Register">Registrieren</a>
+        <a href="#" class="menu-link" data-target="Forum">Forum</a>
+        <a href="#" class="menu-link" data-target="Services"> Unser Service</a>
+    </nav>
+    <div class="board">
+        <h2>Aktuelles:</h2>
+        <p>200€ auf Depotneueröffnung!</p>
+        <p2>Sonderzulage in Höhe von 200€</p2>
+    </div>
+    <div class="board">
+        <h2>Weitere Projekte</h2>
+        <p>f</p>
+    </div>
+    
+    <footer> 
+        &copy; All rights reserved InvestAvisor GmbH 2024
+    </footer>
+    
+    <script>
+        
+        document.querySelector('.menu-btn').addEventListener('click', function() {
+             document.getElementById('menu').style.display = 'block';
+        });
+        document.querySelectorAll('.menu-link').forEach(function(link) {
+            link.addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent default link behavior
+                var target = this.getAttribute('data-target');
+                window.location.href = target + '.html'; // Redirect to target page
+            });
+        });
+    
+    </script>
+
+</body>
+
+</html>
